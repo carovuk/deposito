@@ -16,19 +16,19 @@ public class CCuenta {
 	/**
 	 * Nombre del titular
 	 */
-    public String nombre;
+    private String nombre;
     /**
      * Numero de cuenta
      */
-    public String cuenta;
+    private String cuenta;
     /**
      * Saldo de la cuenta
      */
-    public double saldo;
+    private double saldo;
     /**
      * Tipo de interes de remuneracion de la cuenta
      */
-    public double tipoInteres;
+    private double tipoInteres;
 
     /*
      * Constructores de objetos de tipo CCuenta
