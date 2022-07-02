@@ -8,10 +8,6 @@ public class Main {
         operativa_cuenta(cuenta1, 0);
     }
 
-	/**
-	 * @param cuenta
-	 * @param cantidad TODO
-	 */
 	public static void operativa_cuenta(CCuenta cuenta, float cantidad) {
 		double saldoActual;
 		saldoActual = cuenta.estado();
