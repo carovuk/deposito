@@ -1,0 +1,95 @@
+[1mdiff --git a/deposito/.classpath b/deposito/.classpath[m
+[1mdeleted file mode 100644[m
+[1mindex 3f3893a..0000000[m
+[1m--- a/deposito/.classpath[m
+[1m+++ /dev/null[m
+[36m@@ -1,6 +0,0 @@[m
+[31m-<?xml version="1.0" encoding="UTF-8"?>[m
+[31m-<classpath>[m
+[31m-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>[m
+[31m-	<classpathentry kind="src" path=""/>[m
+[31m-	<classpathentry kind="output" path=""/>[m
+[31m-</classpath>[m
+[1mdiff --git a/deposito/CCuenta.class b/deposito/CCuenta.class[m
+[1mdeleted file mode 100644[m
+[1mindex 5fb260b..0000000[m
+Binary files a/deposito/CCuenta.class and /dev/null differ
+[1mdiff --git a/deposito/CCuenta.java b/deposito/CCuenta.java[m
+[1mdeleted file mode 100644[m
+[1mindex 15a95eb..0000000[m
+[1m--- a/deposito/CCuenta.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,40 +0,0 @@[m
+[31m-public class CCuenta {[m
+[31m-[m
+[31m-[m
+[31m-    private String nombre;[m
+[31m-    private String cuenta;[m
+[31m-    private double saldo;[m
+[31m-    private double tipoInteres;[m
+[31m-[m
+[31m-    public CCuenta()[m
+[31m-    {[m
+[31m-    }[m
+[31m-[m
+[31m-    public CCuenta(String nom, String cue, double sal, double tipo)[m
+[31m-    {[m
+[31m-        nombre =nom;[m
+[31m-        cuenta=cue;[m
+[31m-        saldo=sal;[m
+[31m-    }[m
+[31m-[m
+[31m-    public double estado()[m
+[31m-    {[m
+[31m-        return saldo;[m
+[31m-    }[m
+[31m-[m
+[31m-    public void ingresar(double cantidad) throws Exception[m
+[31m-    {[m
+[31m-        if (cantidad<0)[m
+[31m-            throw new Exception("No se puede ingresar una cantidad negativa");[m
+[31m-        saldo = saldo + cantidad;[m
+[31m-    }[m
+[31m-[m
+[31m-    public void retirar(double cantidad) throws Exception[m
+[31m-    {[m
+[31m-        if (cantidad <= 0)[m
+[31m-            throw new Exception ("No se puede retirar una cantidad negativa");[m
+[31m-        if (estado()< cantidad)[m
+[31m-            throw new Exception ("No se hay suficiente saldo");[m
+[31m-        saldo = saldo - cantidad;[m
+[31m-    }[m
+[31m-}[m
+[1mdiff --git a/deposito/Main.class b/deposito/Main.class[m
+[1mdeleted file mode 100644[m
+[1mindex 4b52b29..0000000[m
+Binary files a/deposito/Main.class and /dev/null differ
+[1mdiff --git a/deposito/Main.java b/deposito/Main.java[m
+[1mdeleted file mode 100644[m
+[1mindex b580c85..0000000[m
+[1m--- a/deposito/Main.java[m
+[1m+++ /dev/null[m
+[36m@@ -1,23 +0,0 @@[m
+[31m-public class Main {[m
+[31m-[m
+[31m-    public static void main(String[] args) {[m
+[31m-        CCuenta miCuenta;[m
+[31m-        double saldoActual;[m
+[31m-[m
+[31m-        miCuenta = new CCuenta("Antonio López","1000-2365-85-1230456789",2500,0);[m
+[31m-        saldoActual = miCuenta.estado();[m
+[31m-        System.out.println("El saldo actual es"+ saldoActual );[m
+[31m-[m
+[31m-        try {[m
+[31m-            miCuenta.retirar(2300);[m
+[31m-        } catch (Exception e) {[m
+[31m-            System.out.print("Fallo al retirar");[m
+[31m-        }[m
+[31m-        try {[m
+[31m-            System.out.println("Ingreso en cuenta");[m
+[31m-            miCuenta.ingresar(695);[m
+[31m-        } catch (Exception e) {[m
+[31m-            System.out.print("Fallo al ingresar");[m
+[31m-        }[m
+[31m-    }[m
+[31m-}[m
